@@ -1,0 +1,11 @@
+﻿@using BlogWeb.Models;
+
+<aside>
+    <h3>Autores</h3>
+    <ul>
+        @foreach (Usuario u in ViewBag.Autores) 
+        {
+            <li>@Html.ActionLink(u.Nome, "BuscaPorAutor", "Busca", new { nomeAutor = u.Nome }, null)</li>
+        }
+    </ul>
+</aside>

@@ -1,0 +1,35 @@
+﻿@model BlogWeb.ViewModels.PostModel
+
+    <div>
+        @Html.ValidationMessageFor(p => p.Titulo)
+        @Html.LabelFor(p => p.Titulo)
+        @Html.TextBoxFor(p => p.Titulo)
+    </div>
+
+    <div>
+        @Html.ValidationMessageFor(p => p.Conteudo)
+        @Html.LabelFor(p => p.Conteudo)
+        @Html.TextAreaFor(p => p.Conteudo, new { rows = 10 })
+    </div>
+
+    <div>
+        @Html.ValidationMessageFor(p => p.DataPublicacao)
+        @Html.LabelFor(p => p.DataPublicacao)
+        @Html.TextBoxFor(p => p.DataPublicacao, "{0: yyyy-MM-dd}", new { type = "date" })
+    </div>
+
+    <div>
+        @Html.ValidationMessageFor(p => p.Publicado)
+        @Html.LabelFor(p => p.Publicado)
+        @Html.CheckBoxFor(p => p.Publicado)
+    </div>
+
+    <div>
+        @Html.ValidationMessageFor(p => p.AutorId)
+        @Html.LabelFor(p => p.AutorId, "Autor:")
+        @Html.DropDownListFor(p => p.AutorId, new SelectList(ViewBag.Usuarios, "Id", "Nome"), "Sem Autor")
+    </div>
+
+    <div>
+        <input type="submit" value="Salvar" />
+    </div>

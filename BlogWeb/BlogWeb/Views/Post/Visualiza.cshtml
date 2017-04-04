@@ -1,0 +1,14 @@
+﻿@model BlogWeb.ViewModels.PostModel
+
+@using (Html.BeginForm("Altera", "Post", FormMethod.Post)) {
+
+    @Html.HiddenFor(p => p.Id)
+    
+    @Html.Partial("Post/_Post")
+}
+
+@section Scripts {
+    <script src="~/Content/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.unobtrusive.js"></script>
+}

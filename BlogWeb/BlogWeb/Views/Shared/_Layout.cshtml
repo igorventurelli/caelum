@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blog do Igor</title>
+    <link href="~/Content/Css/normalize.css" rel="stylesheet" />
+    <link href="~/Content/Css/blog.css" rel="stylesheet" />
+    <link href="~/Content/Css/fontello.css" rel="stylesheet" />
+    <link href="~/Content/Css/fontello-codes.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Posts", "Index", "Post")</li>
+            <li>@Html.ActionLink("Usuários", "Index", "Usuario")</li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Blog do Igor</h1>
+        <p>Blog sobre Asp.NET MVC</p>
+    </header>
+    <div class="conteudo">
+        <main>
+            @RenderBody()
+        </main>
+        @Html.Action("Index", "Menu")
+    </div>
+    <footer>
+        Copyright - Igor Venturelli Oliveira
+    </footer>
+    @RenderSection("Scripts", false)
+</body>
+</html>

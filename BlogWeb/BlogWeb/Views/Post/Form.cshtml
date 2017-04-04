@@ -1,0 +1,12 @@
+﻿@model BlogWeb.ViewModels.PostModel
+
+@using (Html.BeginForm("Adiciona", "Post", FormMethod.Post)) {
+
+    @Html.Partial("Post/_Post")
+}
+
+@section Scripts {
+    <script src="~/Content/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.unobtrusive.js"></script>
+}
